@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import { loader } from "./MenuLoader";
+import { MenuLoader } from "./MenuLoader";
 import MenuItem from "./MenuItem";
 // import { getMenu } from "../../services/apiRestaurant";
 
@@ -15,6 +15,6 @@ function Menu() {
     </ul>
   )
 }
- loader();
+ MenuLoader();
 
 export default Menu;
