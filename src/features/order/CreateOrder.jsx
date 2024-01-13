@@ -6,7 +6,7 @@ const isValidPhone = (str) =>
     str
   );
 
-  console.log(isValidPhone)
+  isValidPhone()
 
 const fakeCart = [
   {

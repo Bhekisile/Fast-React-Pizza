@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 function Header() {
   return (
     <header>
-      <link to='/'>Fast React Pizza Co.</link>
+      <Link to='/'>Fast React Pizza Co.</Link>
 
       <p>Bhekisile</p>
     </header>
