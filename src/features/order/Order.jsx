@@ -57,7 +57,7 @@ function Order() {
   } = order;
   const deliveryIn = calcMinutesLeft(estimatedDelivery);
 
-  console.log(id, cart);
+  console.log('id', order, id, cart);
 
   return (
     <div>
@@ -89,5 +89,9 @@ function Order() {
 }
 
 OrderLoader();
+// export async function OrderLoader({ params }) {
+//   const order = await getOrder(params.orderId)
+// return order;
+// }
 
 export default Order;
