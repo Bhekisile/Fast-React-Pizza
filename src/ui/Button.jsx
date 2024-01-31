@@ -14,7 +14,12 @@ function Button({ children, disabled, to, type }) {
     }
 
     if (to)
-    return <Link to={to} className={styles[type]}>{children}</Link>
+    return <Link 
+      to={to} 
+      className={styles[type]}
+    >
+      {children}
+    </Link>
 
   return (
     <button 
