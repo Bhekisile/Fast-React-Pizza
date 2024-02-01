@@ -27,7 +27,7 @@ MenuItem.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     unitPrice: PropTypes.number.isRequired,
-    ingredients: PropTypes.string.isRequired,
+    ingredients: PropTypes.array.isRequired,
     soldOut: PropTypes.string.isRequired,
     imageUrl: PropTypes.string.isRequired
   }).isRequired,

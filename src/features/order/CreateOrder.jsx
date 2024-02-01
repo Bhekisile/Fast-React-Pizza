@@ -1,8 +1,8 @@
 // import { useState } from "react";
 
-import { Form, useActionData, useNavigation } from "react-router-dom";
-import { action } from "./Action";
+import { Form, redirect, useActionData, useNavigation } from "react-router-dom";
 import Button from "../../ui/Button";
+import { createOrder } from "../../services/apiRestaurant";
 // import { createOrder } from "../../services/apiRestaurant";
 
 // https://uibakery.io/regex-library/phone-number
@@ -59,7 +59,6 @@ function CreateOrder() {
         </div>
 
         <div>
-          <label>Phone number</label>
             <div className="mb-5 flex gap-2 flex-color sm:flex-row sm:items-center">
               <label className="sm:basis-40">Phone number</label>
               <div className="grow">
@@ -70,7 +69,6 @@ function CreateOrder() {
         </div>
 
         <div>
-          <label>Address</label>
             <div className="mb-5 flex gap-2 flex-color sm:flex-row sm:items-center">
               <label className="sm:basis-40">Address</label>
               <div className="grow">
@@ -81,19 +79,6 @@ function CreateOrder() {
             </div>
           </div>
         </div>
-
-        {/* <div>
-          <input
-            type="checkbox"
-            name="priority"
-            id="priority"
-            // value={withPriority}
-            // onChange={(e) => setWithPriority(e.target.checked)}
-          />
-          <label htmlFor="priority">Want to yo give your order priority?</label>
-        </div> */}
-
-        {/* <div> */}
         <div className="mb-12 flex gap-5 items-center">
           <input
             className="h-6 w-6 accent-yellow-400 focus:ring-yellow-400
@@ -104,7 +89,6 @@ function CreateOrder() {
             // value={withPriority}
             // onChange={(e) => setWithPriority(e.target.checked)}
           />
-          <label htmlFor="priority">Want to yo give your order priority?</label>
           <label className="font-medium" htmlFor="priority">Want to yo give your order priority?</label>
         </div>
 
@@ -119,6 +103,29 @@ function CreateOrder() {
   );
 }
 
-action();
+export async function action({ request }) {
+  const formData = await request.formData();
+  const data = Object.fromEntries(formData);
+
+  const order = {
+    ...data,
+    cart: JSON.parse(data.cart),
+    priority: data.priority === 'true',
+  };
+
+  console.log(order);
+
+  const errors = {};
+  if (!isValidPhone(order.phone))
+    errors.phone =
+      'Please give us your correct phone number. We might need it to contact you.';
+
+  if (Object.keys(errors).length > 0) return errors;
+
+  // If everything is okay, create new order and redirect
+  const newOrder = await createOrder(order);
+
+  return redirect(`/order/${newOrder.id}`);
+}
 
 export default CreateOrder;
