@@ -33,7 +33,7 @@ const initialState = {
 };
 
 const userSlice = createSlice({
-  name: '',
+  name: 'user',
   initialState,
   reducers: {
     updateName(state, action) {
