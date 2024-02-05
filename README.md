@@ -48,7 +48,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://react-pizzafastfood.netlify.app/)
+- [Live Demo Link](https://fast-react-pizza-azure.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
