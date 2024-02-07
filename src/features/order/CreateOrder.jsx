@@ -26,11 +26,7 @@ function CreateOrder() {
   const priorityPrice = withPriority ? totalCartPrice * 0.2 : 0;
   const totalPrice = totalCartPrice + priorityPrice;
 
-  // console.log('cart', cart);
-
   if (!cart.length) return <EmptyCart />
-
-  // console.log(cart)
 
   return (
     <div className="px-4 py-6">

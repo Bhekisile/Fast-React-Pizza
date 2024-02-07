@@ -1,5 +1,3 @@
-// Test ID: IIDSAT
-
 import { useLoaderData } from "react-router-dom";
 import {
   calcMinutesLeft,
@@ -21,8 +19,6 @@ function Order() {
     cart,
   } = order;
   const deliveryIn = calcMinutesLeft(estimatedDelivery);
-
-  // console.log('cart for Order', cart);
 
   return (
     <div className="space-y-8 px-4 py-6">
