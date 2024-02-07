@@ -38,11 +38,11 @@ function Button({ children, disabled, to, type, onClick }) {
 }
 
 Button.propTypes = {
-      children: PropTypes.string.isRequired,
-      disabled: PropTypes.string.isRequired,
+      children: PropTypes.array,
+      disabled: PropTypes.func,
       to: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
-      onClick: PropTypes.func.isRequired,
+      onClick: PropTypes.func,
   };
 
 export default Button;

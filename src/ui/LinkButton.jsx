@@ -21,7 +21,7 @@ function LinkButton({ children, to }) {
 }
 
 LinkButton.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.array,
   to: PropTypes.string.isRequired,
 };
 
