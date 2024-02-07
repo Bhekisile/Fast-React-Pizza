@@ -29,8 +29,8 @@ OrderItem.propTypes = {
     quantity: PropTypes.number.isRequired,
     totalPrice: PropTypes.number.isRequired,
   }).isRequired,
-  ingredients: PropTypes.array.isRequired,
   isLoadingIngredients: PropTypes.func,
+  ingredients: PropTypes.array,
 };
 
 export default OrderItem;
