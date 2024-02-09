@@ -24,7 +24,8 @@
 # 📖 [Fast React Pizza] <a name="about-project"></a>
 
 
-**[Fast React Pizza]** is a project that allows users to order pizza. The user can register the name and place the order. The app will generate time estimation and notify the user.
+**[Fast React Pizza]** is a project that allows users to place an order for pizza. The user can register the name in the home page and the menu will be displayed with a search for order button. The user can click add to cart button to add pizza to cart before placing an order. The user has to fill in the form with the address and phone number or click 'get position' button for the app to generate the address. If the user wants her order to be a priority, there's a button to click and an extra charges will be added into the price. Once the order has been placed a message with delivery estimation is displayed informing the user.
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -118,8 +119,7 @@ If you like this project please give it a star.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-
-I would like to thank Jonas and Udemy for this React course.
+I would like to thank Jonas Schmedtmann and the Udemy team for this React crash course.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
