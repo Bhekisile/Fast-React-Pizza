@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 function OrderItem({ item, isLoadingIngredients, ingredients }) {
   const { quantity, name, totalPrice } = item;
 
-  console.log("ingredients", ingredients);
+  // console.log("ingredients", ingredients);
 
-  if (isLoadingIngredients){
-    console.log('Loading...');
-  }
+  // if (isLoadingIngredients){
+  //   console.log('Loading...');
+  // }
 
   return (
     <li className="py-3 space-y-1">
